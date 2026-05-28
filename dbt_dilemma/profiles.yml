@@ -1,0 +1,6 @@
+dbt_dilemma:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../data/dilemma.duckdb"

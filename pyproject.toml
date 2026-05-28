@@ -1,0 +1,17 @@
+[project]
+name = "prisoner-dilemma-etl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-duckdb>=1.10.1",
+    "duckdb>=1.5.3",
+    "httpx>=0.28.1",
+    "orjson>=3.11.9",
+    "polars>=1.41.1",
+    "pyarrow>=24.0.0",
+    "pytest>=9.0.3",
+    "python-dotenv>=1.2.2",
+    "pyyaml>=6.0.3",
+]

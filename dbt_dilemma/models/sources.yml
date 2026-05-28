@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: silver
+    schema: main
+    tables:
+      - name: turns
+        meta:
+          external_location: "../data/silver/turns/*/*.parquet"
+          formatter: oldstyle
+      - name: matches
+        meta:
+          external_location: "../data/silver/matches/*/*.parquet"
+          formatter: oldstyle

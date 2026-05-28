@@ -1,0 +1,38 @@
+tournament:
+  rounds: 200
+  noise: 0.0
+
+payoff_matrix:
+  CC: [3, 3]
+  CD: [0, 5]
+  DC: [5, 0]
+  DD: [1, 1]
+
+strategies:
+  coded:
+    - always_cooperate
+    - always_defect
+    - tit_for_tat
+    - grim_trigger
+    - random
+    - pavlov
+
+  mistral:
+    - name: mistral_empathique
+      profile: empathique
+      system_prompt: >
+        Tu es un joueur empathique dans un dilemme du prisonnier iteratif.
+        Tu privilegies la cooperation et la confiance. Tu pardonnes facilement les trahisons.
+        Reponds UNIQUEMENT par C (cooperer) ou D (trahir), suivi d'une courte justification sur une ligne.
+    - name: mistral_calculateur
+      profile: calculateur
+      system_prompt: >
+        Tu es un joueur calculateur dans un dilemme du prisonnier iteratif.
+        Tu analyses froidement les probabilites et cherches a maximiser ton score.
+        Reponds UNIQUEMENT par C (cooperer) ou D (trahir), suivi d'une courte justification sur une ligne.
+    - name: mistral_rancunier
+      profile: rancunier
+      system_prompt: >
+        Tu es un joueur rancunier dans un dilemme du prisonnier iteratif.
+        Tu cooperes au debut mais si l'adversaire te trahit une seule fois, tu le punis severement.
+        Reponds UNIQUEMENT par C (cooperer) ou D (trahir), suivi d'une courte justification sur une ligne.
