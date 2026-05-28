@@ -1,5 +1,5 @@
 tournament:
-  rounds: 200
+  rounds: 50
   noise: 0.0
 
 payoff_matrix:
