@@ -1,4 +1,4 @@
-.PHONY: generate load transform all clean test
+.PHONY: generate load transform all clean test dashboard
 
 generate:
 	uv run python -m src.generate
@@ -16,3 +16,6 @@ clean:
 
 test:
 	uv run pytest tests/ -v
+
+dashboard:
+	uv run streamlit run dashboard.py
